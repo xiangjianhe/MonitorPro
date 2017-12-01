@@ -1,0 +1,1 @@
+HexToBin -ui 0 -result 0 -default 0xFF -total 512 -input 0 "output\CVT_RL6230_GREEN\CVT_RL6230_GREEN.H00" -input 1 "output\CVT_RL6230_GREEN\CVT_RL6230_GREEN.H01" -input 2 "output\CVT_RL6230_GREEN\CVT_RL6230_GREEN.H02" -input 3 "output\CVT_RL6230_GREEN\CVT_RL6230_GREEN.H03"  -output "output\CVT_RL6230_GREEN\CVT_RL6230_GREEN.bin"

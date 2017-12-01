@@ -1,0 +1,1 @@
+HexToBin -ui 0 -result 0 -input 0 "output\L_LS2013_AD\L_LS2013_AD.H00" -input 1 "output\L_LS2013_AD\L_LS2013_AD.H01"  -input 2 "output\L_LS2013_AD\L_LS2013_AD.H02" -input 3 "output\L_LS2013_AD\L_LS2013_AD.H03" -output "output\L_LS2013_AD\L_LS2013_AD.bin"

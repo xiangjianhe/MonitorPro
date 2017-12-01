@@ -1,0 +1,1 @@
+HexToBin -ui 0 -result 0 -input 0 "output\RL6269_Project.H00" -input 1 "output\RL6269_Project.H01"  -input 2 "output\RL6269_Project.H02" -input 3 "output\RL6269_Project.H03" -output "output\RL6269_Project.bin"

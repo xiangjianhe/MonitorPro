@@ -1,0 +1,1 @@
+HexToBin -ui 0 -result 0 -input 0 "output\L_OrgOSD_RL6229_DP++\L_OrgOSD_RL6229_DP++.H00" -input 1 "output\L_OrgOSD_RL6229_DP++\L_OrgOSD_RL6229_DP++.H01" -input 2 "output\L_OrgOSD_RL6229_DP++\L_OrgOSD_RL6229_DP++.H02" -input 3 "output\L_OrgOSD_RL6229_DP++\L_OrgOSD_RL6229_DP++.H03" -output "output\L_OrgOSD_RL6229_DP++\L_OrgOSD_RL6229_DP++.bin"

@@ -1,0 +1,186 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+Target (RL6001_Series_OsdLibrary), 0x0000 // Tools: 'MCS-51'
+
+Group (OsdLib)
+Group (Extern)
+Group (Command)
+Group (Windows)
+Group (SRAM)
+Group (Function)
+
+File 1,2,<.\STARTUP.A51><STARTUP.A51>
+File 2,5,<.\LibHeader\OSD_Lib_Extern.h><OSD_Lib_Extern.h>
+File 2,5,<.\LibHeader\RL6001_Series_OSD_Lib_Interface.h><RL6001_Series_OSD_Lib_Interface.h>
+File 3,1,<.\OsdLibCode\Command\OsdAddress90_91_92.c><OsdAddress90_91_92.c>
+File 3,1,<.\OsdLibCode\Command\OsdAddressHsbClr.c><OsdAddressHsbClr.c>
+File 3,1,<.\OsdLibCode\Command\OsdAddressHsbSet.c><OsdAddressHsbSet.c>
+File 3,1,<.\OsdLibCode\Command\OsdBurstWriteDataPort.c><OsdBurstWriteDataPort.c>
+File 3,1,<.\OsdLibCode\Command\OsdWriteByte.c><OsdWriteByte.c>
+File 3,1,<.\OsdLibCode\Command\OsdWriteAllByte.c><OsdWriteAllByte.c>
+File 3,1,<.\OsdLibCode\Command\OsdFrameControlByteGet.c><OsdFrameControlByteGet.c>
+File 3,1,<.\OsdLibCode\Command\OsdFrameControlByte.c><OsdFrameControlByte.c>
+File 3,1,<.\OsdLibCode\Command\OsdFrameControlAllByte.c><OsdFrameControlAllByte.c>
+File 4,1,<.\OsdLibCode\Windows\OsdDrawWindowStartOffset.c><OsdDrawWindowStartOffset.c>
+File 4,1,<.\OsdLibCode\Windows\OsdWindowDisable.c><OsdWindowDisable.c>
+File 4,1,<.\OsdLibCode\Windows\OsdDrawWindow.c><OsdDrawWindow.c>
+File 4,1,<.\OsdLibCode\Windows\OsdWindow6SpecialFunction.c><OsdWindow6SpecialFunction.c>
+File 4,1,<.\OsdLibCode\Windows\OsdWindow7SpecialFunction.c><OsdWindow7SpecialFunction.c>
+File 4,1,<.\OsdLibCode\Windows\OsdWindowChessboard.c><OsdWindowChessboard.c>
+File 4,1,<.\OsdLibCode\Windows\OsdWindowHighlightFunction.c><OsdWindowHighlightFunction.c>
+File 4,1,<.\OsdLibCode\Windows\OsdWindowSaturatedColorSelect.c><OsdWindowSaturatedColorSelect.c>
+File 4,1,<.\OsdLibCode\Windows\OsdWindowPriority.c><OsdWindowPriority.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdScrambleDoubleBufferDepth.c><OsdScrambleDoubleBufferDepth.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdSramBaseAddressSet.c><OsdSramBaseAddressSet.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdSramAddressSet.c><OsdSramAddressSet.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdSramAddressCount.c><OsdSramAddressCount.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdCommandByte.c><OsdCommandByte.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdCommandAllByte.c><OsdCommandAllByte.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdCharCommandByteSeries.c><OsdCharCommandByteSeries.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdCharCommandAllByteSeries.c><OsdCharCommandAllByteSeries.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdCharShadowBorderColor.c><OsdCharShadowBorderColor.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdHardwareCompression.c><OsdHardwareCompression.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdHardwareVLC.c><OsdHardwareVLC.c>
+File 5,1,<.\OsdLibCode\SRAM\Osd2BitFontOffset.c><Osd2BitFontOffset.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdSramDataValue.c><OsdSramDataValue.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdBlankFont.c><OsdBlankFont.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdChange1BitColor.c><OsdChange1BitColor.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdChange1BitColorFont256_511.c><OsdChange1BitColorFont256_511.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdChange2BitColor.c><OsdChange2BitColor.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdChange4BitColor.c><OsdChange4BitColor.c>
+File 5,1,<.\OsdLibCode\SRAM\Osd1BitFontShrink.c><Osd1BitFontShrink.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdSetBlinking.c><OsdSetBlinking.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdRowHeight.c><OsdRowHeight.c>
+File 5,1,<.\OsdLibCode\SRAM\OsdCharacterWidth.c><OsdCharacterWidth.c>
+File 6,1,<.\OsdLibCode\Function\OsdCircuitActivated.c><OsdCircuitActivated.c>
+File 6,1,<.\OsdLibCode\Function\OsdGetEnable.c><OsdGetEnable.c>
+File 6,1,<.\OsdLibCode\Function\OsdEnableDisable.c><OsdEnableDisable.c>
+File 6,1,<.\OsdLibCode\Function\OsdVerticalStartSelect.c><OsdVerticalStartSelect.c>
+File 6,1,<.\OsdLibCode\Function\OsdSetTransparency.c><OsdSetTransparency.c>
+File 6,1,<.\OsdLibCode\Function\OsdSetTransparency_Timer.c><OsdSetTransparency_Timer.c>
+File 6,1,<.\OsdLibCode\Function\OsdSetTransparencyType.c><OsdSetTransparencyType.c>
+File 6,1,<.\OsdLibCode\Function\OsdSetColorPalette.c><OsdSetColorPalette.c>
+File 6,1,<.\OsdLibCode\Function\OsdPosition.c><OsdPosition.c>
+File 6,1,<.\OsdLibCode\Function\Osd2FontFunction.c><Osd2FontFunction.c>
+File 6,1,<.\OsdLibCode\Function\OsdDoubleFunction.c><OsdDoubleFunction.c>
+File 6,1,<.\OsdLibCode\Function\OsdPopOn.c><OsdPopOn.c>
+File 6,1,<.\OsdLibCode\Function\OsdRollUp.c><OsdRollUp.c>
+File 6,1,<.\OsdLibCode\Function\OsdVerticalBoundaryFunction.c><OsdVerticalBoundaryFunction.c>
+File 6,1,<.\OsdLibCode\Function\OsdSpecificColorBlending.c><OsdSpecificColorBlending.c>
+
+
+Options 1,0,0  // Target 'RL6001_Series_OsdLibrary'
+ Device (W78LE516)
+ Vendor (Winbond)
+ Cpu (IRAM(0 - 0xFF) XRAM(0- 0xFF) IROM(0-0xFFFF) CLOCK(40000000))
+ FlashUt ()
+ StupF ("LIB\STARTUP.A51" ("Standard 8051 Startup Code"))
+ FlashDR ()
+ DevID ()
+ Rgf (REG54.H)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ÿWinbond\)
+ OrgReg (ÿWinbond\)
+ TgStat=16
+ OutDir (.\LibOutput\)
+ OutName (RL6001_Series_OSD_Lib)
+ GenApp=0
+ GenLib=1
+ GenHex=0
+ Debug=1
+ Browse=1
+ LstDir (.\LibOutput\)
+ HexSel=0
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 0 <>
+ RunUsr 1 0 <>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ CrunUsr 0 0 <>
+ CrunUsr 1 0 <>
+ SVCSID <>
+ MODEL5=2
+ RTOS5=0
+ ROMSZ5=2
+ DHOLD5=0
+ XHOLD5=0
+ T51FL=112
+ XT51FL=0
+ CBANKS5=0
+ XBANKS5=0
+ RCB51 { 0,0,0,0,0,255,255,0,0 }
+ RXB51 { 0,0,0,0,0,0,0,0,0 }
+ OCM51 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCR51 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IRO51 { 1,0,0,0,0,0,0,1,0 }
+ IRA51 { 0,0,0,0,0,0,1,0,0 }
+ XRA51 { 0,0,0,0,0,0,1,0,0 }
+ XRA512 { 0,0,0,0,0,0,0,0,0 }
+ IROM512 { 0,0,0,0,0,0,0,0,0 }
+ C51FL=21646608
+ C51VA=0
+ C51MSC ()
+ C51DEF ()
+ C51UDF ()
+ INCC5 (..\..\..\Common;..\..\ScalerFunction\Header;..\Header;.\LibHeader;.\OsdLibCode)
+ AX51FL=4
+ AX51MSC ()
+ AX51SET ()
+ AX51RST ()
+ INCA5 ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ BankNo=65535
+ LX51FL=292
+ LX51OVL ()
+ LX51MSC ()
+ LX51DWN ()
+ LX51LFI ()
+ LX51ASN ()
+ LX51RES ()
+ LX51CCL ()
+ LX51UCL ()
+ LX51CSC ()
+ LX51UCS ()
+ LX51COB ()
+ LX51XDB ()
+ LX51PDB ()
+ LX51BIB ()
+ LX51DAB ()
+ LX51IDB ()
+ LX51PRC ()
+ LX51STK ()
+ LX51COS ()
+ LX51XDS ()
+ LX51BIS ()
+ LX51DAS ()
+ LX51IDS ()
+  OPTDL (S8051.DLL)()(DP51.DLL)(-p53)(S8051.DLL)()(TP51.DLL)(-p53)
+  OPTDBG 48125,-1,()()()()()()()()()() ()()()()
+ FLASH1 { 0,0,0,0,0,0,0,0,255,255,255,255,0,0,0,0,0,0,0,0 }
+ FLASH2 ()
+ FLASH3 ()
+ FLASH4 ()
+EndOpt
+

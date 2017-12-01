@@ -1,0 +1,9 @@
+.git
+bin/*
+code/Output
+code/xml/
+code/CVT Lenovo Series.Opt
+customer/Buildtime.h
+*.bak
+.tags
+.tags_sorted_by_file

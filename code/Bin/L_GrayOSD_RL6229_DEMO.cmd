@@ -1,0 +1,1 @@
+HexToBin -ui 0 -result 0 -input 0 "output\L_GrayOSD_RL6229_DEMO\L_GrayOSD_RL6229_DEMO.H00" -input 1 "output\L_GrayOSD_RL6229_DEMO\L_GrayOSD_RL6229_DEMO.H01" -input 2 "output\L_GrayOSD_RL6229_DEMO\L_GrayOSD_RL6229_DEMO.H02" -input 3 "output\L_GrayOSD_RL6229_DEMO\L_GrayOSD_RL6229_DEMO.H03" -output "output\L_GrayOSD_RL6229_DEMO\L_GrayOSD_RL6229_DEMO.bin"

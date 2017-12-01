@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<Contract>
+		<Summary></Summary>
+		<Account></Account>
+		<MidAccount></MidAccount>
+		<Quantity></Quantity>
+		<ContractNo></ContractNo>
+		<OrderTime></OrderTime>
+	</Contract>
+	<ProdLine>
+		<LineName></LineName>
+		<PcbNum></PcbNum>
+		<ShortPcbNum></ShortPcbNum>
+		<Solution></Solution>
+		<Region></Region>
+		<OwnedBy></OwnedBy>
+		<PhaseState></PhaseState>
+		<Standard></Standard>
+		<Structure></Structure>
+		<OwnedUnit></OwnedUnit>
+		<UseState></UseState>
+	</ProdLine>
+	<Confirmation>
+		<SW_Items>
+			<Attr Name="SW_FAC_NOTICE" Alias="SW_FAC_NOTICE" Ids="0" Atoms="复位方式:不用复位"/>
+			__SW_AUTO_PARSE_LIST__
+		</SW_Items>
+		<HW_Items>
+		</HW_Items>
+	</Confirmation>
+</Root>
+

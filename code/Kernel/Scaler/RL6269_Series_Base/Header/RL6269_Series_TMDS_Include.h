@@ -1,0 +1,181 @@
+/********************************************************************************/
+/*   The  Software  is  proprietary,  confidential,  and  valuable to Realtek   */
+/*   Semiconductor  Corporation  ("Realtek").  All  rights, including but not   */
+/*   limited  to  copyrights,  patents,  trademarks, trade secrets, mask work   */
+/*   rights, and other similar rights and interests, are reserved to Realtek.   */
+/*   Without  prior  written  consent  from  Realtek,  copying, reproduction,   */
+/*   modification,  distribution,  or  otherwise  is strictly prohibited. The   */
+/*   Software  shall  be  kept  strictly  in  confidence,  and  shall  not be   */
+/*   disclosed to or otherwise accessed by any third party.                     */
+/*   c<2003> - <2011>                                                           */
+/*   The Software is provided "AS IS" without any warranty of any kind,         */
+/*   express, implied, statutory or otherwise.                                  */
+/********************************************************************************/
+
+//----------------------------------------------------------------------------------------------------
+// ID Code      : RL6269_Series_TMDS_Include.h No.0000
+// Update Note  :
+//----------------------------------------------------------------------------------------------------
+
+//****************************************************************************
+// LAYER DEFINITIONS / MACROS
+//****************************************************************************
+
+//--------------------------------------------------
+// Define for Clk Freq Detection
+//--------------------------------------------------
+#define _TMDS_FREQ_NORMAL_OFFSET                    0x7E // 340MHz * 0.01 / 27KHz
+#define _TMDS_FREQ_NORMAL_UPPER_BOUND               0x3328 // 340 * (1.04) * 1000 / 27
+#define _TMDS_FREQ_NORMAL_LOWER_BOUND               0x0379 // 25 * (0.96) * 1000 / 27
+
+#if(_INTERNAL_OSC_XTAL == _IOSC27000K)
+
+#define _TMDS_FREQ_PS_UPPER_BOUND                   0x38D7 // 1000 * 340 * 1.04 / (27 * 0.9) = 14551
+#define _TMDS_FREQ_PS_LOWER_BOUND                   0x0328 // 1000 * 25 * 0.96 / (27 * 1.1) = 808
+
+#elif(_INTERNAL_OSC_XTAL == _IOSC14318K)
+
+#define _TMDS_FREQ_PS_UPPER_BOUND                   0x6B30 // 1000 * 340 * 1.04 / (14.318 * 0.9) = 27440
+#define _TMDS_FREQ_PS_LOWER_BOUND                   0x05F3 // 1000 * 25 * 0.96 / (14.318 * 1.1) = 1523
+
+#endif
+
+#if(_MHL_SUPPORT == _ON)
+#define _TMDS_MHL_FREQ_NORMAL_OFFSET                0x1C // 75MHz * 0.01 / 27KHz
+#define _TMDS_MHL_FREQ_NORMAL_UPPER_BOUND           0x0B49 // 75 * (1.04) * 1000 / 27
+#define _TMDS_MHL_FREQ_PS_UPPER_BOUND               0x0C8A // 1000 * 75 * 1.04 / (27 * 0.9) = 3210
+#endif
+
+//--------------------------------------------------
+// Define for Video Detect
+//--------------------------------------------------
+#define _TMDS_VIDEO_DATA_NONE                       0
+#define _TMDS_VIDEO_DATA_DE_ONLY                    1
+#define _TMDS_VIDEO_DATA_RGBHV                      2
+
+//--------------------------------------------------
+// Define for Watch Dog Type
+//--------------------------------------------------
+#define _HDMI_AVI_INFO_VARIATION_WD                 _BIT0
+#define _HDMI_AV_MUTE_WD                            _BIT1
+
+//--------------------------------------------------
+// Define for Packet Type
+//--------------------------------------------------
+#define _HDMI_3D_FORMAT                             0x81
+#define _HDMI_AVI_INFO_TYPE                         0x82
+#define _HDMI_AUDIO_INFO_TYPE                       0x84
+#define _HDMI_GENERAL_CONTROL_TYPE                  0x03
+
+//--------------------------------------------------
+// Definitions of MHL Mode for Physical Settings
+//--------------------------------------------------
+#define _TMDS_24BIT_PHY_SETTING                     0
+#define _TMDS_MHL_PPMODE_PHY_SETTING                1
+
+//--------------------------------------------------
+// Macro of PHY Set Flag
+//--------------------------------------------------
+#define GET_TMDS_PHY_SET()                          (g_bTmdsPhySet)
+#define SET_TMDS_PHY_SET()                          (g_bTmdsPhySet = _TRUE)
+#define CLR_TMDS_PHY_SET()                          (g_bTmdsPhySet = _FALSE)
+
+//--------------------------------------------------
+// Macro of TMDS Video Detecting Flag
+//--------------------------------------------------
+#define GET_TMDS_RGBHV_DETECTING()                 (bit)(g_ucTmdsCtrl & _BIT3)
+#define SET_TMDS_RGBHV_DETECTING()                 (g_ucTmdsCtrl |= _BIT3)
+#define CLR_TMDS_RGBHV_DETECTING()                 (g_ucTmdsCtrl &= ~_BIT3)
+
+//--------------------------------------------------
+// Macro of Packet Detecting Flag
+//--------------------------------------------------
+#define GET_HDMI_PACKET_DETECTING()                 (bit)(g_ucTmdsCtrl & _BIT4)
+#define SET_HDMI_PACKET_DETECTING()                 (g_ucTmdsCtrl |= _BIT4)
+#define CLR_HDMI_PACKET_DETECTING()                 (g_ucTmdsCtrl &= ~_BIT4)
+
+//--------------------------------------------------
+// Macro of AVI Info Frame Received Flag
+//--------------------------------------------------
+#define GET_HDMI_AVI_INFO_FRAME_RECEIVED()          (bit)(g_ucTmdsCtrl & _BIT5)
+#define SET_HDMI_AVI_INFO_FRAME_RECEIVED()          (g_ucTmdsCtrl |= _BIT5)
+#define CLR_HDMI_AVI_INFO_FRAME_RECEIVED()          (g_ucTmdsCtrl &= ~_BIT5)
+
+//--------------------------------------------------
+// Macro of GCP Received Flag
+//--------------------------------------------------
+#define GET_HDMI_GCP_RECEIVED()                     (bit)(g_ucTmdsCtrl & _BIT0)
+#define SET_HDMI_GCP_RECEIVED()                     (g_ucTmdsCtrl |= _BIT0)
+#define CLR_HDMI_GCP_RECEIVED()                     (g_ucTmdsCtrl &= ~_BIT0)
+
+//--------------------------------------------------
+// Macro of the Fiset Time of Z0 Asserted
+//--------------------------------------------------
+#define GET_TMDS_Z0_ASSERTED()                      (bit)(g_ucTmdsCtrl & _BIT7)
+#define SET_TMDS_Z0_ASSERTED()                      (g_ucTmdsCtrl |= _BIT7)
+#define CLR_TMDS_Z0_ASSERTED()                      (g_ucTmdsCtrl &= ~_BIT7)
+
+//--------------------------------------------------
+// Macro of HPD Evnet Trigger
+//--------------------------------------------------
+#define GET_TMDS_HPD_TRIGGER_EVENT()                (bit)(g_ucTmdsCtrl & _BIT2)
+#define SET_TMDS_HPD_TRIGGER_EVENT()                (g_ucTmdsCtrl |= _BIT2)
+#define CLR_TMDS_HPD_TRIGGER_EVENT()                (g_ucTmdsCtrl &= ~_BIT2)
+
+#if(_MHL_SUPPORT == _ON)
+#define GET_TMDS_CLK_MODE()                         (g_bTmdsClkMode)
+#define SET_TMDS_CLK_MODE(x)                        (g_bTmdsClkMode = (x))
+#endif
+
+//****************************************************************************
+//    STRUCT / TYPE / ENUM DEFINITTIONS
+//****************************************************************************
+
+
+#ifndef __RL6269_SERIES_TMDS__
+//****************************************************************************
+// VARIABLE EXTERN
+//****************************************************************************
+
+extern bit g_bTmdsPhySet;
+extern WORD g_usTmdsClkCount;
+extern BYTE g_ucTmdsCtrl;
+extern bit g_bTmdsD0DdcDetected; 
+extern bit g_bTmdsD1DdcDetected; 
+extern bit g_bTmdsD2DdcDetected; 
+extern bit g_bTmdsD3DdcDetected;  
+
+#if(_MHL_SUPPORT == _ON)
+extern bit g_bTmdsClkMode;
+#endif
+//****************************************************************************
+// FUNCTION EXTERN
+//****************************************************************************
+
+extern void ScalerTmdsInitial(BYTE ucInputPort);
+extern void ScalerTmdsInterruptInitial(void);
+
+extern bit ScalerTmdsCheckCDRStable(WORD usClkCount);
+extern WORD ScalerTmdsMeasureClk(BYTE ucMeasureClk);
+extern WORD ScalerTmdsMeasureClk_EXINT0(BYTE ucMeasureClk);
+extern BYTE ScalerTmdsFormatDetect(void);
+extern void ScalerTmdsDviVideoSetting(void);
+extern void ScalerTmdsPowerSavingProc(void);
+extern void ScalerTmdsPowerOffProc(void);
+
+#if(_HDMI_SUPPORT == _ON)
+extern void ScalerTmdsHdmiVideoSetting(void);
+extern void ScalerTmdsHdmiPacketDetect(bit bWait);
+extern void ScalerTmdsHdmiPacketDetectEvent(void);
+extern bit ScalerTmdsHdmiColorInfoChanged(void);
+extern BYTE ScalerTmdsHdmiGetColorDepth(void);
+extern bit ScalerTmdsHdmiDeepColorProc(void);
+extern void ScalerTmdsHdmiAVMuteProc(void);
+extern void ScalerTmdsHdmiWatchDog(BYTE ucWDType, bit bEnable);
+#endif
+
+extern void ScalerTmdsFreqDetectDisable(void);
+extern void ScalerTmdsFirstActiveProc(BYTE ucSourceType);
+extern bit ScalerTmdsHdcpEnabled(void);
+
+#endif // End of #ifndef __RL6269_SERIES_TMDS__
